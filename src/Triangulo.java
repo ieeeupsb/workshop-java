@@ -1,4 +1,4 @@
-public class Pyramid {
+public class Triangulo {
 
 	public static void main(String[] args) {
 		int counter = 1;

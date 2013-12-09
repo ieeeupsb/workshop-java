@@ -12,13 +12,11 @@ public class TestListItem {
 
 	@Test
 	public void testCheckItem() throws Exception {
-		ListItem item = new ListItem(
-				"Fazer Exercicio 1",
-				new GregorianCalendar(2013,11,11)
-			);
-		
+		ListItem item = new ListItem("Fazer Exercicio 1",
+				new GregorianCalendar(2013, 11, 11));
+
 		item.check();
-		
+
 		assertTrue(item.isChecked());
 	}
 
