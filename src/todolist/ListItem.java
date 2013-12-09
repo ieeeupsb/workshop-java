@@ -6,7 +6,7 @@ import java.util.GregorianCalendar;
 public class ListItem {
 	public static SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMM HH:mm yyyy");
 
-	boolean check = false;
+	boolean checked = false;
 	GregorianCalendar dueDate = new GregorianCalendar();
 	String text;
 	
@@ -24,16 +24,18 @@ public class ListItem {
 	}
 
 	public void check() {
-		this.check = true;
+		this.checked = true;
 	}
 
 	public boolean isChecked() {
-		return this.check;
+		return this.checked;
 	}
 	
 	@Override
 	public String toString() {
-		return this.text + "\n" + dateFormat.format(this.dueDate.getTime());
+		return this.text +
+				" | " + (checked ? "[x]" : "[_]" ) + 
+				" | due on: " + dateFormat.format(this.dueDate.getTime());
 	}
 
 }
