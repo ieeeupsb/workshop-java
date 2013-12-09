@@ -6,6 +6,9 @@ import java.util.Scanner;
 public class CLI {
 	TodoList todolist = new TodoList();
 	
+	public CLI() {
+		// TODO load todolist from file if available
+	}
 
 	private void header() {
 		System.out.println(
@@ -49,7 +52,7 @@ public class CLI {
 		// TODO Auto-generated method stub
 	}
 	private void exit() {
-		// TODO Auto-generated method stub
+		// TODO On exit save todo list to file
 	}
 	
 	private void goToSubMenu(int option) {
