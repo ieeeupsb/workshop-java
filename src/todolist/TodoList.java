@@ -4,17 +4,17 @@ import java.util.ArrayList;
 
 public class TodoList {
 
-	public ArrayList<ListItem> todos;
+	public ArrayList<Task> todos;
 
 	public TodoList() {
 		this.todos = new ArrayList<>();
 	}
 
-	public void addItem(ListItem listItem) {
+	public void addItem(Task listItem) {
 		this.todos.add(listItem);
 	}
 
-	public void removeItem(ListItem item) {
+	public void removeItem(Task item) {
 		this.todos.remove(item);
 	}
 
@@ -27,6 +27,14 @@ public class TodoList {
 		}
 
 		return str;
+	}
+
+	public void clearDone() {
+		for(int i = 0; i < todos.size(); i++)
+			if( todos.get(i).checked ) {
+				todos.remove(i);
+				i--;
+			}
 	}
 
 }
